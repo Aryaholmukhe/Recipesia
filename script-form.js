@@ -66,12 +66,11 @@ function loadPagePreview() {
     for (const [key, vals] of Object.entries(val)) {
 
         
-        vals = replaceAll(decodeURIComponent(vals), escapeRegExp("+"), " ");
         console.log("CURRENT: ", key, vals)
 
         if (key.includes("ingredient-amount")) {
             console.log("Yes it does")
-            ing_amount = vals
+            ing_amount = replaceAll(decodeURIComponent(vals), escapeRegExp("+"), " ");
 
 
         }
@@ -88,7 +87,7 @@ function loadPagePreview() {
 
         else if (key.includes("step-amount")) {
             
-            ste_amount = replaceAll(vals, escapeRegExp("+"), " ")
+            ste_amount = replaceAll(decodeURIComponent(vals), escapeRegExp("+"), " ");
 
 
         }
