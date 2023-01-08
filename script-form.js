@@ -78,7 +78,7 @@ function loadPagePreview() {
             parent = document.getElementById("r-incredients")
 
             var wrapper = document.createElement('div');
-            wrapper.innerHTML = `<p><span class="i-amount">` + ing_amount + ` </span><span class="i-name">` + vals + `</span></p>`;
+            wrapper.innerHTML = `<p><span class="i-amount">` + ing_amount + ` </span><span class="i-name">` + replaceAll(decodeURIComponent(vals), escapeRegExp("+"), " ") + `</span></p>`;
             parent.appendChild(wrapper.firstChild);
             ing_amount = ""
 
@@ -95,7 +95,7 @@ function loadPagePreview() {
             parent = document.getElementById("r-steps")
 
             var wrapper = document.createElement('div');
-            wrapper.innerHTML = `<p><span class="s-info">`+ ste_amount + `</span><span class="s-time">`+ vals + `</span></p>`;
+            wrapper.innerHTML = `<p><span class="s-info">`+ ste_amount + `</span><span class="s-time">`+ replaceAll(decodeURIComponent(vals), escapeRegExp("+"), " ") + `</span></p>`;
             console.log(parent)
             parent.appendChild(wrapper.firstChild);
             ste_amount = ""
