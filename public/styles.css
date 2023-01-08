@@ -1,0 +1,116 @@
+html,
+body {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	background: #000103;
+	overflow: hidden;
+}
+
+.main_div {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card {
+	border-top-left-radius: 54px;
+	border-top-right-radius: 54px;
+	border-bottom-left-radius: 54px;
+	border-bottom-right-radius: 54px;
+	width: 90%;
+	height: 80%;
+	z-index: 99;
+	background-color: rgba(255, 255, 255, .45);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.551);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, .25);
+  box-shadow: 0 0 80px 1px rgba(255, 255, 255, 0.49);
+  backdrop-filter: blur(75px)
+}
+
+.card_space {
+	padding: 4%;
+}
+img{
+	margin: 0;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.title {
+	color: rgba(30.00000011175871, 30.00000011175871, 30.00000011175871, 1);
+	font-family: Quicksand;
+	text-align: left;
+	font-size: 96px;
+	letter-spacing: 0;
+	font-weight: bold;
+}
+
+.highlight {
+	color: #FF312E;
+	font-size: larger;
+	font-weight: bolder;
+	text-shadow:
+-1px 0px 0px rgb(0, 0, 0),
+1px 0px 0px rgb(0, 0, 0),
+0px -1px 0px rgb(0, 0, 0),
+0px 1px 0px rgb(0, 0, 0);
+}
+
+.e3_19 { 
+	border-radius:500px;
+	background-color:rgb(255, 185, 46);
+	width:50%;
+	height:80%;
+	position:absolute;
+	right:30%;
+	bottom:-35%;
+}
+.e3_21 { 
+	border-radius:500px;
+	background-color:rgb(108, 103, 119);
+	width:50%;
+	height:60%;
+	position:absolute;
+	left:-5%;
+	top:-10%;
+}
+.e3_20 { 
+	border-radius:500px;
+	background-color:rgba(255, 49.00000087916851, 46.000001057982445, 1);
+	width:50%;
+	height:80%;
+	position:absolute;
+	right: -6%;
+	top:-15%;
+}
+.text{
+	color: rgba(0, 1.0000000591389835, 3.000000058673322, 1);
+	font-family: Mulish;
+	text-align: left;
+	font-size: 150%;
+	letter-spacing: 2;
+	width: 70%;
+}
+
+.hero_button{
+	background-color:#FF312E;
+	width: 30%;
+	border-radius: 5px;
+	height: 10%;
+	border: none;
+	color: #FFFFFA;
+	font-weight: bold;
+	font-size: 150%;
+	justify-content: center;
+	left: 50%;
+	bottom: 3%;
+	position: absolute;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}

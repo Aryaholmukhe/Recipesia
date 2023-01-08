@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles-form.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alatsi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/cropper/2.3.4/cropper.min.css'>
+    <link rel="stylesheet" href="./styles-crop.css">
+
+
+</head>
+
+<body>
+    <nav class="nav" onclick="location.href='../'">Recipesia </nav>
+    <div class="container">
+        <form action="preview.html" id="form-sub" method="GET">
+            <div class="input">
+                <label class="label-text" for="">What is your name?</label>
+                <br>
+                <input contenteditable="true" class="inp" type="text" id="author-name" name="r-author">
+            </div>
+            <div class="input">
+                <label class="label-text" for="">What is the name of your recipe?</label>
+                <br>
+                <input class="inp" type="text" id="recipe-name" name="r-title">
+            </div>
+            <div class="input">
+                <label class="label-text" for="">Write about your recipe here</label>
+                <br>
+                <input class="inp" type="text" id="recipe-about" name="r-about">
+            </div>
+            <div class="input">
+                <label class="label-text" for="">How many people does it serve?</label>
+                <br>
+                <input class="inp" type="text" id="serve" name="r-serving">
+            </div>
+            <div class="input">
+                <label class="label-text" for="">How long does it take to make?</label>
+                <br>
+                <input class="inp" type="text" id="time-spend" name="r-time">
+            </div>
+
+            <div class="input">
+                <label class="label-text" for="">Choose a difficulty level:</label>
+                <select class="inp" name="r-difficulty" id="cars">
+                    <option value="easy">easy</option>
+                    <option value="novice">novice</option>
+                    <option value="medium">medium</option>
+                    <option value="hard">hard</option>
+                    <option value="extreme">extreme</option>
+                </select>
+            </div>
+
+            <div class="input">
+                <label class="label-text" for="">What are your ingredients?</label>
+                <br>
+                <div class="ingre" id="ingre-id">
+                    <input class="inp" type="text" id="ingredients" name="r-ingredient-amount0" placeholder="Amount" style="width:30%">
+                    <input class="inp" type="text" id="ingredients" name="r-ingredient-name0" placeholder="Name" style="width:30%">
+                    <button type="button" onclick="addIngredient()" class="add-btn">+</button>
+                </div>
+                
+            </div>
+
+
+            <div class="input">
+                <label class="label-text" for="">What are your steps?</label>
+                <br>
+                <div class="steps" id="step-id">
+                    <input class="inp" type="text" id="atep" name="r-step-amount0" placeholder="Description" style="width:30%">
+                    <input class="inp" type="text" id="step" name="r-step-name0" placeholder="Time" style="width:15%">
+                    <button type="button" onclick="addSteps()" class="add-btn">+</button>
+                </div>
+            </div>
+
+            <div class="input">
+                <label class="label-text" for="">Any final notes for this recipe?</label>
+                <br>
+                <input class="inp" type="text" id="time-spend" name="r-notes">
+            </div>
+
+
+
+
+            <input type="submit" class="login-button" value="Submit">
+        </form>
+
+        <div class="e22_6"></div> <!-- Yellow circle-->
+        <div class="e22_7"></div> <!-- Red circle-->
+    </div>
+    <script>
+        var ing = 1
+        var ste = 1
+        function addIngredient(){
+            var parent = document.getElementById("ingre-id");
+            // <input class="inp" type="text" id="ingredients" name="r-time" placeholder="Amount" style="width:30%">
+            newboxAmount = document.createElement("input")
+            newboxAmount.classList = "inp"
+            newboxAmount.type = "text"
+            newboxAmount.id = "ingredients"
+            newboxAmount.name = "r-ingredient-amount"+ing
+            newboxAmount.placeholder = "Amount"
+            newboxAmount.style = "width:30%"
+            newboxName = document.createElement("input")
+            newboxName.classList = "inp"
+            newboxName.type = "text"
+            newboxName.id = "ingredients"
+            newboxName.name = "r-ingredient-name"+ing
+            newboxName.placeholder = "Name"
+            newboxName.style = "width:30%"
+
+            parent.appendChild(newboxAmount)
+            parent.appendChild(newboxName)
+            ing += 1
+
+        }
+        
+        function addSteps(){
+            var parent = document.getElementById("step-id");
+            // <input class="inp" type="text" id="ingredients" name="r-time" placeholder="Amount" style="width:30%">
+            newboxDes = document.createElement("input")
+            newboxDes.classList = "inp"
+            newboxDes.type = "text"
+            newboxDes.id = "step"
+            newboxDes.name = "r-step-amount"+ste
+            newboxDes.placeholder = "Description"
+            newboxDes.style = "width:30%"
+            newboxTime = document.createElement("input")
+            newboxTime.classList = "inp"
+            newboxTime.type = "text"
+            newboxTime.id = "step"
+            newboxTime.name = "r-step-name"+ste
+            newboxTime.placeholder = "Time"
+            newboxTime.style = "width:15%"
+
+
+            parent.appendChild(newboxDes)
+            parent.appendChild(newboxTime)
+            ste += 1
+
+        }
+    </script>
+    <script src="script-form.js"></script>
+</body>
+
+</html>
