@@ -1,0 +1,97 @@
+html, body{
+    padding: 1%;
+    background-color: bisque;
+}
+
+/* to get them side by side */
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.item-2{
+order: 2;
+flex-wrap: wrap;
+/* margin: 0 5%; */
+}
+
+/* cropper for image css here */
+.cropped{
+    width: 100%;
+}
+.box {
+    padding: 0.5em;
+    width: 100%;
+    margin:0.5em;
+}
+
+.box-2 {
+    padding: 0.5em;
+    width: calc(100%/2 - 1em);
+}
+
+.options label,
+.options input{
+    width:4em;
+    padding:0.5em 1em;
+}
+.btn{
+    background:white;
+    color:black;
+    border:1px solid black;
+    padding: 0.5em 1em;
+    text-decoration:none;
+    margin:0.8em 0.3em;
+    display:inline-block;
+    cursor:pointer;
+}
+
+.hide {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+}
+/* preview for pdf css here */
+#page{
+    width: 780px;
+    height: 1120px;
+    background-color: rgb(255, 255, 255) !important;
+}
+
+.page-img{
+    width: 2480px;
+    height: 3508px
+}
+.heading{
+    display: flex;
+    justify-content: space-evenly;
+}
+#r-serving, #r-time, #r-difficulty{
+    order: 4;
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(0, 0, 255, 0.151);
+}
+
+.r-title{
+    text-align: center;
+    font-size: 50px;
+}
+
+hr{
+    width: 70%;
+}
+#stuff{
+    padding: 2%
+}
+
+#r-incredients{
+    display: flex;
+  flex-wrap: wrap;
+}
+
+#r-incredients p{
+    flex: 1 0 calc(25% - 10px);
+}
